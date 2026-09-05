@@ -313,11 +313,17 @@
     }
 
     function exibirConfirmacao(r) {
+      // Oculta os inputs e botões para a tela não parecer congelada
+      document.getElementById('campos-formulario').classList.add('hidden');
       document.getElementById('box-conflito').classList.add('hidden');
       document.getElementById('btn-submit-agendar').classList.add('hidden');
-      document.getElementById('box-sucesso').classList.remove('hidden');
+      
+      // Exibe a caixa de confirmação limpa
+      const boxSucesso = document.getElementById('box-sucesso');
+      boxSucesso.classList.remove('hidden');
       
       document.getElementById('token-sucesso').innerText = r.token;
+      document.getElementById('info-horario-agendado').innerText = "Horário reservado: " + r.inicio + " até " + r.fim;
       document.getElementById('btn-cardapio').href = r.linkCardapio;
       document.getElementById('btn-painel').href = r.linkPainel;
       
