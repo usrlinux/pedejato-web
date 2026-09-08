@@ -8,6 +8,100 @@
   <meta name="description" content="Acelere o atendimento de bares, restaurantes, rotisserias, confeitarias, lanchonetes e pizzarias. Zero comissões por venda, comanda térmica e Kanban ágil de cozinha.">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://pedejato.com.br/#organization",
+          "name": "PedeJato",
+          "url": "https://pedejato.com.br/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://pedejato.com.br/logo.png"
+          },
+          "description": "Plataforma de pedidos ultrarrápida para bares, restaurantes, rotisserias e docerias. Zero comissão por venda e mensalidade fixa.",
+          "sameAs": [
+            "https://www.youtube.com/@pedejato"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://pedejato.com.br/#website",
+          "url": "https://pedejato.com.br/",
+          "name": "PedeJato",
+          "publisher": {
+            "@id": "https://pedejato.com.br/#organization"
+          },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://pedejato.com.br/#software",
+          "name": "PedeJato",
+          "applicationCategory": "BusinessApplication",
+          "operatingSystem": "Web",
+          "url": "https://pedejato.com.br/",
+          "description": "Plataforma completa de pedidos para restaurantes, rotisserias, docerias e bares. Cardápio mobile, impressão de comandas, Kanban em tempo real e zero comissão por venda.",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "BRL",
+            "description": "Mensalidade fixa previsível, sem comissão por pedido"
+          },
+          "featureList": [
+            "Zero comissão por venda",
+            "Impressão automática de comandas 80mm",
+            "Monitor Kanban em tempo real",
+            "Cardápio mobile fluido",
+            "Divisão de sabores e opcionais",
+            "Mensalidade fixa previsível"
+          ],
+          "publisher": {
+            "@id": "https://pedejato.com.br/#organization"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "O PedeJato cobra comissão por pedido?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Não. O PedeJato trabalha com mensalidade fixa previsível e zero comissão por venda. Você fica com 100% do valor dos pedidos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Para quais tipos de estabelecimento o PedeJato é indicado?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "O PedeJato é ideal para rotisserias, docerias, confeitarias, padarias, lanchonetes, hamburguerias, pizzarias, esfiharias, bares e restaurantes com alto fluxo de pedidos."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Como funciona o teste grátis de 1 hora?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Você agenda uma demonstração exclusiva de 1 hora, testa a plataforma na prática e vê como ela se adapta à operação do seu estabelecimento."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "O PedeJato imprime comandas automaticamente?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sim. A plataforma imprime comandas térmicas de 80mm direto para a cozinha, chapa ou área de embalagem, com itens, endereço e troco destacados."
+              }
+            }
+          ]
+        }
+      ]
+    }
+</script>
   <style>
     .hero-glow {
       background: radial-gradient(circle at 50% 30%, rgba(220, 38, 38, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
