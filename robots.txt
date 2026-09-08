@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Bloqueia áreas administrativas e arquivos desnecessários (ajuste se tiver)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://pedejato.com.br/sitemap.xml
