@@ -1,0 +1,864 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sistema de Pedidos sem Comissão | PedeJato</title>
+  <meta name="description" content="Descubra quando vale a pena ter um sistema de pedidos sem comissão, como reduzir a dependência dos aplicativos e o que avaliar antes de escolher uma solução.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pedejato.com.br/sistema-de-pedidos-sem-comissao.html">
+
+  <meta property="og:title" content="Sistema de Pedidos sem Comissão: vale a pena sair dos aplicativos?">
+  <meta property="og:description" content="Entenda como funciona um sistema de pedidos sem comissão e quando vale a pena ter um canal próprio de vendas.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pedejato.com.br/sistema-de-pedidos-sem-comissao.html">
+
+  <style>
+    :root {
+  --primary: #e5252a;
+  --primary-dark: #c91d22;
+  --accent: #f97316;
+  --navy: #0f172a;
+  --text: #334155;
+  --muted: #64748b;
+  --bg: #f8fafc;
+  --white: #ffffff;
+  --border: #e2e8f0;
+  --soft: #fff1f2;
+  --soft-orange: #fff7ed;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: min(100% - 40px, 1100px);
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+header {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--primary);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+nav a {
+  color: #475569;
+}
+
+nav a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* BOTÕES */
+
+.btn {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 5px 12px rgba(229, 37, 42, 0.18);
+}
+
+.btn:hover {
+  background: var(--primary-dark);
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+
+.hero {
+  padding: 75px 0 60px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(229, 37, 42, 0.08), transparent 55%),
+    linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+
+.hero-content {
+  max-width: 850px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 700;
+  background: var(--soft);
+  border: 1px solid #fecdd3;
+  padding: 7px 16px;
+  border-radius: 999px;
+  letter-spacing: .02em;
+}
+
+h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  line-height: 1.12;
+  margin: 20px 0;
+  letter-spacing: -1.5px;
+  color: var(--navy);
+}
+
+.hero p {
+  font-size: 19px;
+  color: #475569;
+  max-width: 720px;
+  margin: 0 auto 30px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 28px;
+  text-align: left;
+}
+
+.breadcrumb a {
+  color: var(--primary);
+}
+
+/* CONTEÚDO */
+
+main {
+  padding: 45px 0 80px;
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 45px;
+  align-items: start;
+}
+
+article {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 42px;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.25;
+  margin: 42px 0 16px;
+  color: var(--navy);
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 28px 0 10px;
+  color: var(--navy);
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+ul {
+  padding-left: 22px;
+  margin-bottom: 22px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* DESTAQUES */
+
+.highlight {
+  background: var(--soft-orange);
+  border-left: 4px solid var(--accent);
+  padding: 22px 24px;
+  border-radius: 0 8px 8px 0;
+  margin: 28px 0;
+}
+
+.highlight p:last-child {
+  margin-bottom: 0;
+}
+
+/* TABELA */
+
+.table-wrapper {
+  overflow-x: auto;
+  margin: 25px 0;
+}
+
+table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+}
+
+th {
+  background: var(--navy);
+  color: white;
+  font-weight: 700;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.sidebar-card h3 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.sidebar-card ul {
+  padding-left: 18px;
+  font-size: 14px;
+}
+
+/* CTA FINAL */
+
+.cta {
+  background: var(--navy);
+  color: white;
+  padding: 38px;
+  border-radius: 14px;
+  margin-top: 45px;
+}
+
+.cta h2 {
+  color: white;
+  margin-top: 0;
+  font-size: 30px;
+}
+
+.cta p {
+  color: #cbd5e1;
+}
+
+.cta .btn {
+  margin-top: 10px;
+}
+
+/* FAQ */
+
+.faq {
+  border-top: 1px solid var(--border);
+  padding-top: 25px;
+  margin-top: 35px;
+}
+
+/* FOOTER */
+
+footer {
+  background: var(--navy);
+  color: #cbd5e1;
+  padding: 35px 0;
+  font-size: 14px;
+}
+
+footer a {
+  color: #fca5a5;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 800px) {
+  .article-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: static;
+  }
+
+  article {
+    padding: 25px;
+  }
+
+  .hero {
+    padding: 55px 0 40px;
+  }
+
+  nav {
+    gap: 10px;
+  }
+
+  nav a:not(.btn) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: min(100% - 28px, 1100px);
+  }
+
+  .header-content {
+    min-height: 64px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  article {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  .cta {
+    padding: 25px;
+  }
+}
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Sistema de Pedidos sem Comissão: vale a pena sair dos aplicativos?",
+    "description": "Entenda como funciona um sistema de pedidos sem comissão, quando vale a pena ter um canal próprio e o que avaliar antes de escolher uma solução.",
+    "author": {
+      "@type": "Organization",
+      "name": "PedeJato"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "PedeJato",
+      "url": "https://pedejato.com.br"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://pedejato.com.br/sistema-de-pedidos-sem-comissao.html"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-content">
+      <a href="https://pedejato.com.br/" class="logo">PedeJato</a>
+
+      <nav>
+        <a href="https://pedejato.com.br/">Início</a>
+        <a href="https://pedejato.com.br/#recursos">Recursos</a>
+        <a href="https://pedejato.com.br/#teste" class="btn">Testar Grátis</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="breadcrumb">
+        <a href="https://pedejato.com.br/">Início</a> /
+        Sistema de pedidos sem comissão
+      </div>
+
+      <span class="eyebrow">Guia para estabelecimentos</span>
+
+      <h1>Sistema de Pedidos sem Comissão: vale a pena sair dos aplicativos?</h1>
+
+      <p>
+        Entenda como funciona um sistema próprio de pedidos, quando vale a pena
+        reduzir a dependência dos aplicativos e o que avaliar antes de escolher
+        uma solução para seu negócio.
+      </p>
+
+      <a href="https://pedejato.com.br/#teste" class="btn">
+        Agendar teste gratuito de 1 hora
+      </a>
+    </div>
+  </section>
+
+  <main>
+    <div class="container article-layout">
+
+      <article>
+
+        <p>
+          Você já parou para calcular quanto paga de comissão por mês nos
+          aplicativos de delivery?
+        </p>
+
+        <p>
+          Para uma pizzaria, rotisseria, doceria ou lanchonete, os aplicativos
+          podem ser importantes para atrair clientes. Mas, quando uma parte de
+          cada venda vai para taxas e comissões, o custo pode pesar na margem
+          do negócio.
+        </p>
+
+        <p>
+          E existe uma pergunta que muitos donos de estabelecimentos começam
+          a fazer:
+        </p>
+
+        <div class="highlight">
+          <p>
+            <strong>“Será que vale a pena ter um sistema próprio de pedidos,
+            sem pagar comissão por cada venda?”</strong>
+          </p>
+        </div>
+
+        <p>
+          A resposta depende da sua operação, do volume de pedidos e da forma
+          como você conquista clientes. Mas, para muitos negócios, ter um canal
+          próprio pode ser uma alternativa interessante para aumentar o controle
+          sobre as vendas e reduzir a dependência dos aplicativos.
+        </p>
+
+        <p>
+          Neste artigo, você vai entender como funciona um sistema de pedidos
+          sem comissão, quando faz sentido considerar essa opção e o que avaliar
+          antes de escolher uma solução.
+        </p>
+
+        <h2>O que é um sistema de pedidos sem comissão?</h2>
+
+        <p>
+          Um sistema de pedidos sem comissão é uma solução que permite ao
+          estabelecimento receber pedidos por um canal próprio, sem pagar uma
+          comissão sobre cada venda ao sistema.
+        </p>
+
+        <p>
+          Na prática, o cliente acessa o canal de pedidos do negócio, escolhe
+          os produtos, informa os dados necessários e envia o pedido. A equipe
+          recebe a solicitação e segue com a preparação e a entrega ou retirada.
+        </p>
+
+        <p>
+          A diferença principal é que o estabelecimento passa a ter uma
+          alternativa aos aplicativos de terceiros.
+        </p>
+
+        <h3>Marketplace x canal próprio</h3>
+
+        <div class="table-wrapper">
+          <table>
+            <thead>
+              <tr>
+                <th>Aplicativo de delivery</th>
+                <th>Sistema próprio de pedidos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>O cliente compra dentro de uma plataforma.</td>
+                <td>O cliente compra pelo canal do estabelecimento.</td>
+              </tr>
+              <tr>
+                <td>Pode haver comissão por pedido.</td>
+                <td>Pode haver mensalidade, conforme a solução.</td>
+              </tr>
+              <tr>
+                <td>O negócio depende das regras da plataforma.</td>
+                <td>O negócio tem mais controle sobre a experiência.</td>
+              </tr>
+              <tr>
+                <td>A relação com o cliente pode ficar concentrada no aplicativo.</td>
+                <td>A marca pode fortalecer seu próprio relacionamento.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="highlight">
+          <p>
+            <strong>Importante:</strong> sem comissão não significa
+            necessariamente sem custo. Antes de contratar, verifique
+            mensalidade, taxas adicionais e condições do serviço.
+          </p>
+        </div>
+
+        <h2>Por que tantos estabelecimentos consideram essa alternativa?</h2>
+
+        <h3>1. A comissão pode reduzir a margem de cada pedido</h3>
+
+        <p>
+          Imagine uma venda de R$ 100. Se uma comissão de 20% fosse aplicada
+          apenas como exemplo, R$ 20 seriam destinados à comissão, antes de
+          considerar outros custos da operação.
+        </p>
+
+        <p>
+          Esse percentual é apenas ilustrativo. As condições variam conforme
+          a plataforma, o plano e os serviços contratados.
+        </p>
+
+        <p>
+          O ponto é que <strong>o custo por pedido precisa entrar na conta
+          da operação</strong>. Se o estabelecimento já recebe muitos pedidos,
+          uma alternativa sem comissão pode ajudar a tornar os custos mais
+          previsíveis.
+        </p>
+
+        <h3>2. O negócio pode depender menos de uma única plataforma</h3>
+
+        <p>
+          Os aplicativos podem trazer novos clientes, mas depender
+          exclusivamente deles pode limitar as decisões do estabelecimento.
+        </p>
+
+        <p>
+          Ter um canal próprio permite trabalhar outras formas de venda, como:
+        </p>
+
+        <ul>
+          <li>Divulgação nas redes sociais.</li>
+          <li>Link de pedidos no Instagram.</li>
+          <li>Clientes recorrentes.</li>
+          <li>Divulgação por WhatsApp.</li>
+          <li>Ações de fidelização.</li>
+          <li>Comunicação direta com o público.</li>
+        </ul>
+
+        <p>
+          A ideia não é necessariamente abandonar os aplicativos. É
+          <strong>ter mais de um caminho para vender</strong>.
+        </p>
+
+        <h3>3. A experiência de compra pode ficar mais alinhada à marca</h3>
+
+        <p>
+          Quando o cliente compra pelo canal próprio, o estabelecimento pode
+          organizar a experiência de acordo com sua identidade e sua forma
+          de trabalhar.
+        </p>
+
+        <p>
+          Isso ajuda a construir uma relação mais próxima com quem já conhece
+          o negócio e pode facilitar estratégias de recompra.
+        </p>
+
+        <h2>Quando vale a pena ter um sistema próprio de pedidos?</h2>
+
+        <p>
+          Não existe uma resposta única para todos os estabelecimentos.
+          O melhor momento depende da operação.
+        </p>
+
+        <h3>Faz sentido considerar um sistema próprio quando:</h3>
+
+        <ul>
+          <li>Você já recebe pedidos por WhatsApp, telefone ou outros canais.</li>
+          <li>Tem clientes que compram novamente com frequência.</li>
+          <li>Quer aumentar a margem das vendas que já consegue gerar.</li>
+          <li>Precisa organizar melhor os pedidos da cozinha.</li>
+          <li>Quer reduzir a dependência dos aplicativos.</li>
+          <li>Busca uma mensalidade previsível em vez de comissão por pedido.</li>
+        </ul>
+
+        <h3>Talvez ainda não seja o momento quando:</h3>
+
+        <ul>
+          <li>Você está começando do zero e ainda não tem clientes.</li>
+          <li>Depende 100% dos aplicativos para ser encontrado.</li>
+          <li>Ainda não tem uma rotina de atendimento e produção organizada.</li>
+          <li>Está procurando apenas mais visibilidade, sem uma estratégia para levar clientes ao canal próprio.</li>
+        </ul>
+
+        <p>
+          Nesse caso, o sistema próprio pode ser usado como complemento,
+          enquanto o negócio continua explorando os canais que já trazem
+          clientes.
+        </p>
+
+        <div class="highlight">
+          <p>
+            <strong>O objetivo não é escolher entre aplicativos ou canal
+            próprio. É construir uma operação que não dependa de apenas um
+            deles.</strong>
+          </p>
+        </div>
+
+        <h2>O que avaliar antes de escolher um sistema de pedidos?</h2>
+
+        <p>
+          Antes de contratar, vale observar alguns pontos importantes.
+        </p>
+
+        <h3>Zero comissão real</h3>
+
+        <p>
+          Confira se a solução realmente não cobra comissão sobre os pedidos
+          e se existem taxas adicionais.
+        </p>
+
+        <p>
+          Pergunte também se há cobrança por transação, por pagamento ou por
+          algum recurso específico.
+        </p>
+
+        <h3>Facilidade de uso na cozinha</h3>
+
+        <p>
+          O sistema precisa funcionar bem para quem prepara os pedidos.
+          Recursos como <strong>impressão automática de comandas</strong> e
+          <strong>Kanban de pedidos</strong> podem ajudar a organizar a
+          produção e reduzir confusões durante os horários de maior movimento.
+        </p>
+
+        <h3>Velocidade para o cliente final</h3>
+
+        <p>
+          Quanto mais simples for fazer um pedido, melhor. O cliente precisa
+          conseguir encontrar os produtos, escolher as opções e finalizar
+          a compra sem enfrentar um processo complicado.
+        </p>
+
+        <h3>Suporte e mensalidade previsível</h3>
+
+        <p>
+          Um sistema de pedidos faz parte da operação. Por isso, é importante
+          saber como funciona o suporte e quais são os custos recorrentes.
+        </p>
+
+        <p>
+          Uma solução barata que não atende quando você precisa pode acabar
+          custando caro em tempo e problemas.
+        </p>
+
+        <h2>Como o PedeJato pode ajudar seu negócio?</h2>
+
+        <p>
+          O <strong>PedeJato</strong> foi pensado para estabelecimentos que
+          querem ter mais controle sobre seus pedidos e reduzir a dependência
+          de comissões.
+        </p>
+
+        <p>
+          A proposta é oferecer um sistema próprio para negócios como
+          pizzarias, rotisserias, docerias e lanchonetes, com recursos
+          voltados para a rotina de vendas e produção.
+        </p>
+
+        <p>Entre os recursos apresentados pelo PedeJato estão:</p>
+
+        <ul>
+          <li>
+            <strong>Zero comissão:</strong> uma alternativa para receber
+            pedidos sem pagar comissão sobre cada venda ao sistema.
+          </li>
+          <li>
+            <strong>Impressão automática:</strong> ajuda a organizar o
+            recebimento das comandas na operação.
+          </li>
+          <li>
+            <strong>Kanban de pedidos:</strong> permite acompanhar o
+            andamento dos pedidos de forma visual.
+          </li>
+          <li>
+            <strong>Teste gratuito de 1 hora:</strong> uma oportunidade para
+            conhecer o sistema antes de decidir.
+          </li>
+        </ul>
+
+        <p>
+          A melhor forma de avaliar se a solução faz sentido é testar na
+          prática, considerando o fluxo de pedidos e a rotina do seu
+          estabelecimento.
+        </p>
+
+        <h2>Como funciona o teste gratuito de 1 hora?</h2>
+
+        <p>
+          Antes de decidir, você pode conhecer o sistema na prática e avaliar
+          se ele atende à sua operação.
+        </p>
+
+        <p>
+          Durante o teste, a ideia é entender como funciona o recebimento
+          dos pedidos, a organização da cozinha e a experiência do cliente.
+        </p>
+
+        <p>
+          <strong>O objetivo é que você consiga avaliar a solução antes de
+          tomar uma decisão.</strong>
+        </p>
+
+        <p>
+          Se você está considerando reduzir a dependência dos aplicativos,
+          esse pode ser um bom momento para conhecer uma alternativa.
+        </p>
+
+        <div class="faq">
+          <h2>Perguntas frequentes</h2>
+
+          <h3>Um sistema de pedidos sem comissão elimina todos os custos?</h3>
+          <p>
+            Não necessariamente. “Sem comissão” significa que não há comissão
+            sobre cada venda ao sistema, mas podem existir mensalidade, taxas
+            de pagamento ou outros custos. Sempre confira as condições da
+            solução.
+          </p>
+
+          <h3>Preciso abandonar os aplicativos para usar um sistema próprio?</h3>
+          <p>
+            Não. Você pode continuar usando os aplicativos e, ao mesmo tempo,
+            desenvolver um canal próprio para seus clientes.
+          </p>
+
+          <h3>O sistema próprio serve para pizzarias e lanchonetes?</h3>
+          <p>
+            Sim. A proposta do PedeJato é atender diferentes estabelecimentos
+            de alimentação, incluindo pizzarias, rotisserias, docerias e
+            lanchonetes.
+          </p>
+
+          <h3>Como saber se vale a pena para o meu negócio?</h3>
+          <p>
+            Avalie o volume de pedidos, os custos atuais, a frequência de
+            recompra dos clientes e a necessidade de organizar melhor a
+            operação. O teste gratuito pode ajudar a entender se a solução
+            faz sentido para sua realidade.
+          </p>
+        </div>
+
+        <section class="cta" id="teste">
+          <h2>Quer ver na prática como funciona?</h2>
+
+          <p>
+            Agende um teste gratuito de 1 hora do PedeJato e descubra como
+            um sistema próprio pode ajudar seu estabelecimento a organizar
+            os pedidos e vender com mais controle.
+          </p>
+
+          <a href="https://pedejato.com.br/#teste" class="btn">
+            Agendar teste gratuito de 1 hora
+          </a>
+        </section>
+
+      </article>
+
+      <aside class="sidebar">
+
+        <div class="sidebar-card">
+          <h3>Quer conhecer o PedeJato?</h3>
+          <p>
+            Veja como funciona o sistema de pedidos e agende seu teste
+            gratuito de 1 hora.
+          </p>
+          <a href="https://pedejato.com.br/#teste" class="btn">
+            Testar grátis
+          </a>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Neste artigo</h3>
+          <ul>
+            <li><a href="#teste">O que é um sistema sem comissão?</a></li>
+            <li><a href="#teste">Quando vale a pena migrar?</a></li>
+            <li><a href="#teste">O que avaliar?</a></li>
+            <li><a href="#teste">Como o PedeJato ajuda?</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>PedeJato</strong>
+      <p>
+        Sistema de pedidos para estabelecimentos de alimentação.
+      </p>
+      <a href="https://pedejato.com.br/">Voltar para o site principal</a>
+    </div>
+  </footer>
+
+</body>
+</html>
